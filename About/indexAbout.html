@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Accesories</title>
+
+    <link rel="stylesheet" href="./styleAbout.css">
+    <link rel="stylesheet" href="../styleGlobalCSS/styleGlobal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <script src="./scriptAbout.js" defer></script>
+</head> 
+
+<body>
+    <button onclick="topFunction()" class="btnNone" id="myBtn" title="Go to top"><i id="right" class="fa-solid fa-angle-up"></i></button>
+
+
+    
+
+            <!--header-ul impreuna cu nav-->
+            <header>
+                <nav style="position: absolute;" >
+                    <a class="link_nav" href="../About/indexAbout.html">despre</a>
+                    <a class="link_nav" href="../Exploree/index.html">exploră</a>
+                    <i id="home" class="fa-solid fa-home" onclick="homeButton()"></i>
+                    <a class="link_nav" href="../Journal/indexJournal.html">jurnal</a>
+                    <a class="link_nav" href="../Register/indexRegister.html">Logare</a>           
+                </nav> <!--/nav-->
+            </header> <!--/header-->
+
+            <main>
+                <!--Partea unu-->
+                <div class="container1">
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                            <div class="mySlides1">
+                                <h1 class="titluC1">Rolex</h1>
+                                <p class="prgC1">Rolex SA este un designer și producător de ceasuri elvețian, fondat în Marea Britanie, cu sediul în Geneva, Elveția. Fondată în 1905 sub numele de Wilsdorf and Davis de Hans Wilsdorf și Alfred Davis la Londra, compania a înregistrat Rolex drept numele de marcă al ceasurilor sale în 1908 și a devenit Rolex Watch Co. Ltd. în 1915. După Primul Război Mondial, compania și-a mutat baza. a operațiunilor către Geneva din cauza economiei nefavorabile din Regatul Unit. În 1920, Hans Wilsdorf a înregistrat Montres Rolex SA la Geneva ca nou nume de companie (montre înseamnă ceas de mână în franceză); a devenit ulterior Rolex SA.</p>
+                                <button class="butonC1" onclick="btnRolex()">MAI MULTE DETALII</button>
+                            </div> 
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <div class="mySlides1">
+                                <h1 class="titluC1">Casio</h1>
+                                <p class="prgC1">Casio Computer Co., Ltd. este un producător japonez de dispozitive electronice. Corporația a fost fondată în aprilie 1946 la Tokyo. Este cel mai bine cunoscut ca producător de calculatoare, echipamente audio, PDA-uri, camere, instrumente muzicale, tablete și ceasuri. În 1957, Casio a lansat primul calculator complet electric din lume (modelul 14-A). Compania a fost fondată în aprilie 1946 de cei patru frați Casio: Toshio, Kazuo, Tadao și Yukio; numele lor de familie este transmis în mod tradițional în latină ca Kashio, dar frații au decis să îl simplifice în numele companiei în Casio.</p>
+                                <button class="butonC1" onclick="btnCasio()">MAI MULTE DETALII</button>
+                            </div>
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <div class="mySlides1">
+                                <h1 class="titluC1">Omega</h1>
+                                <p class="prgC1">Omega este o companie de ceasuri elvețiană care produce ceasuri de lux sub marca Omega. Compania a fost fondată în 1848 în orașul elvețian La Chaux-de-Fonds ca un simplu atelier de asamblare a ceasurilor. A fost creat de Louis Brandt, în vârstă de 23 de ani, care a petrecut iarna asambland ceasuri de buzunar din piese de schimb furnizate de artizani locali. Apoi, când a venit primăvara, a plecat într-o călătorie în Europa pentru a vinde produsele manufacturate. Ceasurile aveau o cerere stabilă și îi asigurau o existență confortabilă.</p>
+                                <button class="butonC1" onclick="btnOmega()">MAI MULTE DETALII</button>
+                            </div>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="mySlides1">
+                                <h1 class="titluC1">Tissot</h1>
+                                <p class="prgC1">Tissot este un producător de ceasuri de lux elvețian. Compania a fost fondată în 1853 de Charles-Félicien Tissot și fiul său Charles-Emile în Le Locle. Compania se numea inițial „Charles Tissot și Fiul” și era un mic atelier în care fermierii locali veneau să lucreze iarna și foloseau această perioadă a anului pentru a face ceasuri.</p>
+                                <button class="butonC1" onclick="btnTissot()">MAI MULTE DETALII</button>
+                            </div> 
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="mySlides1">
+                                <h1 class="titluC1">Breitling</h1>
+                                <p class="prgC1">Breitling este un producător elvețian de ceasuri de lux. Sediul central al companiei este situat în cantonul Jura. Numele provine de la numele fondatorului - Léon Breitling (1860-1914). Istoria Breitling a început în 1884, când un tânăr german, Leon Breitling, și-a deschis propriul atelier de ceasuri în Saint-Imier. Apoi s-a specializat în producția de cronografe. După 12 ani, compania purta deja numele „G. Leon Breitling S.A. Montbrillant Watch Company” și s-a mutat la La Chaux-de-Fonds, care este considerată încă „capitala” ceasornicarilor.</p>
+                                <button class="butonC1" onclick="btnBreitling()">MAI MULTE DETALII</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)"> <i id="left" class="fa-solid fa-angle-left"></i> </a>
+                        <a class="next" onclick="plusSlides(1)"> <i id="left" class="fa-solid fa-angle-right"></i> </a>
+                    </div>
+                    <!-- The dots/circles -->
+                    <div class="dots" style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
+                </div> <!--container1-->
+                <div class="vinieta"></div>
+
+                <!--Partea doi-->
+                <div class="container2">
+                    <div class="bloc_C2">
+                        <img class="imgMuseu" src="../Resource/seikoMuseum.webp" alt="Rolex Oyster">
+                    </div>
+                    <div class="blocMare_C2">
+                        <div class="blocBMC2">
+                            <h2 class="titluBMC2">Museul Seiko (Tokyo, Japonia)</h2>
+                            <p class="prgC2">La următoarea călătorie în Japonia, nu uitați să vizitați <b>Muzeul Seiko</b>. Seiko a fost fondată în 1881 de Kintaro Hattori în Ginza. Și ca parte a proiectului de aniversare a 100 de ani al mărcii, Muzeul Seiko a fost construit în 1981. Scopul muzeului a fost să adune, să păstreze și să studieze diferite materiale și mostre care se referă la timp și ceasuri. Înființat în orașul Sumida, muzeul a fost mutat în districtul Ginza în august 2020, la timp pentru cea de-a 160-a naștere a lui Kintaro Hattori.</p>
+                            <button class="butonC1" onclick="btnMuseum1()">MAI MULT</button>
+                        </div>
+                    </div> <!--blocMare_C2-->
+                </div> <!--container2-->
+
+                
+                <!--Partea trei-->
+                <!--Galerie Imagini-->  
+                <div class="container3" id="container3">
+                    <div class="main_item" id="main_item">
+                        <div class="culoareImg">
+                            <p class="text_middle">Breitling</p>
+                            <img src="../Resource/breitlingBuildingN.jpg" alt="Breitling">
+                        </div>
+                    </div>    
+                    <div class="main_item">
+                        <div class="culoareImg">
+                            <p class="text_middle">Rolex</p>
+                            <img src="../Resource/Rolex_Large.jpg" alt="Rolex">
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="culoareImg">
+                            <p class="text_middle">Casio</p>
+                            <img src="../Resource/casioBuilding.jpg" alt="Casio">
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="culoareImg">
+                            <p class="text_middle">Tag Heuer</p>
+                            <img src="../Resource/tagHeuerBuildingN.jpg" alt="Tag Heuer">
+                        </div>
+                    </div>    
+                    <div class="main_item">
+                        <div class="culoareImg">
+                            <p class="text_middle">Omega</p>
+                            <img src="../Resource/omegaBuilding.jpg" alt="Omega">
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="culoareImg">
+                            <p class="text_middle">Michael Kors</p>
+                            <img src="../Resource/mkBuildingN.jpg" alt="Michael Kors">
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="culoareImg">
+                            <p class="text_middle">Diesel</p>
+                            <img src="../Resource/dieselBuilding.jpg" alt="Diesel">
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="culoareImg">
+                            <p class="text_middle">Hublot</p>
+                            <img src="../Resource/hublotBuilding.jpg" alt="Hublot">
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="culoareImg">
+                            <p class="text_middle">Seiko</p>
+                            <img src="../Resource/seikoBuilding.jpg" alt="Seiko">
+                        </div>
+                    </div>
+                </div> <!--container3-->
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01"> 
+                    <div id="caption"></div>
+                </div>
+
+
+                <!--Partea patru-->
+                <div class="container4">
+                    <div class="blocMare_C4">
+                        <div class="blocBMC4">
+                            <h2 class="titluBMC2">Muzeul Omega (Bienne, Elveția)</h2>
+                            <p class="prgC2">Sunt atât de multe de despachetat despre <b>Muzeul Omega</b>, având în vedere afilierea mărcii cu mișcările și ocaziile istorice. De la inovațiile Omega, călătoriile în spațiu și înregistrările de precizie până la aventurile sale în adâncuri, cronometrarea Jocurilor Olimpice și chiar James Bond - Omega deține o poveste pe care niciun alt brand nu o poate spune. Muzeul său, situat în Bienne, Elveția, deține răspunsuri la întrebările fiecărui entuziast despre trecutul, prezentul și viitorul mărcii.</p>
+                            <button class="butonC1" onclick="btnMuseum2()">MAI MULT</button>
+                        </div>
+                    </div> <!--blocMare_C4-->
+                    <div class="bloc_C4">
+                        <img class="imgMuseu" src="https://www.museums.ch/onlinedb/upload_files/muf/1517_online_2_CDT_2.jpg.jpg" alt="Museu Omega">
+                    </div>
+                </div> <!--container2-->
+
+            </main>
+
+
+            <!--Footer-->
+            <footer id="footer" style="margin-top: 120px;">
+                <div class="footer">
+                    <div class="logo">
+                        <div class="logo-items">
+                            <div class="title-logo">
+                                <h1>Accesoriile <br> Perfecte</h1>
+                            </div>
+                        <p class="contact-footer">Contact Information:</p> 
+                        <a id="link-black" class="linkF" href="#">Politica de confidențialitate</a>
+                        </div>
+                    </div>
+            
+                    <div class="site-map">
+                        <div class="link-footer">
+                            <h3>Harta site-ului:</h3>
+                            <h2>Accesoriile <br> Perfecte</h2>
+                            <div class="link-uri" id="link-uri">
+                                <a class="linkFN" href="../Home/indexHome.html">Acasă</a>
+                                <a class="linkFN" href="../About/indexAbout.html">Despre</a>
+                                <a class="linkFN" href="../Exploree/index.html">Exploră</a>
+                                <a class="linkFN" href="../Journal/indexJournal.html">Jurnal</a>
+                                <a class="linkFN" href="../Register/indexRegister.html">Logare</a>
+                            </div>
+                        </div>
+                        <p class="copyright">&copy; Copyright 2023. Toate drepturile rezervate.</p>
+                    </div>
+            
+                    <div class="mail-adress">
+                        <div class="mailAdressItems">
+                            <form class="mail-form">
+                                <input id="formFooter" class="email" type="email" placeholder="Introducti email">
+                            </form>
+                            <button>Abonează-te</button>
+                            <form class="form_social_media">
+                                <input class="social_media" type="image" src="../Resource/Facebook.png" alt="Facebook" style="border-radius: 7px;">
+                                <input class="social_media" type="image" src="../Resource/Instagram.jpg" alt="Instagram">
+                                <input class="social_media" type="image" src="../Resource/WhatsApp.png" alt="WhatsApp">
+                                <input class="social_media" type="image" src="../Resource/Telegram.png" alt="Telegram" style="border-radius: 7px;">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-copyright">
+                    <p class="copyright-responsive">&copy; Copyright 2023. Toate drepturile rezervate.</p>
+                </div>
+            </footer>
+
+    
+   
+    <script>
+        //Home button
+        function homeButton(){
+        window.location.href = "../Home/indexHome.html";
+        }
+    </script>
+</body>
+</html>

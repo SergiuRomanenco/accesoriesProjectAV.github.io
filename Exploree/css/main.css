@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*variabile*/
+:root { 
+    --index: calc(1vw + 1vh); /*determina marimea paginii*/
+    --color-header: #f4efec;
+    --color-text: #b7b7b7;
+    --color-text-black: black;
+    --gallery-gap: calc(var(--index) * 10);
+}
+
+@font-face {
+    font-family: raleway-c;
+    src: url(../fonts/raleway-regular.woff2);
+}
+@font-face {
+    font-family: outfit-c;
+    src: url(../fonts/outfit-regular.woff2);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: outfit-c;
+}
+
+/*will-change, pentru eliminarea intarzierilor*/
+.content, .hero, .main-header, .gallery > * {
+    will-change: transform;
+}
+
+.darkMode{
+    background-color: #000000;
+    color: #fafafa;
+    font-family: raleway-c;
+    /*overflow-x: hidden; /*in cazul cand elementele depasesc marimea paginii, nu pot da scroll stanga-dreapta*/
+}
+
+.lightMode{
+    background-color: white;
+    font-family: raleway-c;
+}
+
+.wrapper{
+    background-image: url(../img/asfalt-light1.png);
+}
+ 
+/*Footer light mode*/
+
+
+#iconMode{
+    font-size: 30px;
+    position: fixed;
+    right: 30px;
+    top: 24px;
+    z-index: 100; 
+    cursor: pointer;
+}
+
+.fa-sun{
+    color: rgb(219, 219, 5);
+    transition: 1.5s ease;
+}
+
+
+.hero{
+    width: calc(var(--index) * 22); /*img in functie de marimea paginii*/
+    position: absolute; /*pentru a aranja usor pozitia elementului in pagina*/
+    right: 10vw;
+    top: 6vh;
+    z-index: -1; /*sub elemente*/
+}
+
+.main-header{
+    height: 100vh; /*Inaltimea primului ecran*/
+}
+
+.container {
+    padding: 0 12vw;
+}
+
+.main-title{
+    font-size: calc(var(--index) * 5.5);
+    position: absolute;
+    width: min-content; /*al doilea cuvant din rand nou*/
+    bottom: 8vh;
+    letter-spacing: 5px;
+    line-height: 1;
+    transition: 1.5s ease;
+}
+.black-title{
+    color: black;
+}
+
+.gallery{
+    display: flex;
+    padding: calc(var(--index) * 16) 0 0 0;
+}
+
+/*Imparte cele doua div-uri din interior prin parti (stanga-dreapta)*/
+.gallery > *{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.gallery__item{
+    max-width: calc(var(--index) * 22.5);
+    margin-bottom: var(--gallery-gap);
+    max-height: 95vh;
+    border-radius: 8px;
+}
+
+.gallery__item, .text-block__h, .text-block__p{
+    width: 95%;
+}
+
+.gallery__left{
+    margin-top: calc(var(--gallery-gap) * .75);
+}
+
+.gallery img:hover{
+    cursor: pointer;
+}
+
+
+.text-block{
+    color: var(--color-text);
+    position: relative; /*pentru ca elementul o sa planeze*/
+}
+.blackH2{
+    color: var(--color-text-black);
+}
+.blackP{
+    color: var(--color-text-black);
+}
+
+.btnNone{
+    display: none;
+}
+
+.myBtn{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 100;
+    background-color: rgb(226, 34, 34);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%; 
+    font-size: 18px;
+    border: none;
+    animation-name: aparitie;
+    animation-duration: 1s;
+}
+
+.disparitieBtn{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: -50px;
+    z-index: 100;
+    background-color: rgb(226, 34, 34);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    border: none;
+    animation-name: disparitie;
+    animation-duration: 1s;
+}
+
+@keyframes aparitie {
+    from {right: -50px;}
+    to {right: 15px;}
+   }
+
+@keyframes disparitie {
+from {right: 15px;}
+to {right: -50px;}
+}
+
+#myBtn:hover{
+    background-color: #555; 
+}
+
+
+.gallery-responsive{
+    display: none;
+}
+.gallery__img{
+    max-width: calc(var(--index) * 22.5);
+    margin-bottom: var(--gallery-gap);
+    max-height: 95vh;
+    border-radius: 8px;
+}
+.gallery__text{
+    max-width: calc(var(--index) * 22.5);
+    margin-bottom: var(--gallery-gap);
+    max-height: 95vh;
+    border-radius: 8px;
+}
+.blackResponsive{
+    color: black;
+}
+
+
+
+
+@media only screen and (max-width: 1000px){
+    .hero{
+        right: 0vw;
+        top: 13vh;
+    }
+    .main-title{
+        bottom: 30vh;
+        font-size: calc(var(--index) * 4.5);
+    }
+    .gallery{
+        display: flex;
+        padding: calc(var(--index) * 10) 0 0 0;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .hero{
+        width: calc(var(--index) * 18); /*img in functie de marimea paginii*/
+        right: 0vw;
+        top: 4vh;
+    }
+    .main-title{
+        bottom: 20vh;
+        font-size: calc(var(--index) * 4.5);
+    }
+    .gallery{
+        display: none;
+    }
+    .gallery-responsive{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: calc(var(--index) * 10) 0 0 0;
+    }
+    #iconMode{
+        font-size: 25px;
+        right: 5px;
+        top: 5px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+

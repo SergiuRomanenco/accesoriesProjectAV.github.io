@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.btnNone{
+  display: none;
+}
+
+.myBtn{
+  height: 50px;
+  width: 50px; 
+  position: fixed;
+  bottom: 15px;
+  right: 6px;
+  z-index: 100;
+  background-color: rgb(226, 34, 34);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  border: none;
+  animation-name: aparitieBtn;
+  animation-duration: 1s;
+}
+
+.disparitieBtn{
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 15px;
+  right: -50px;
+  z-index: 100;
+  background-color: rgb(226, 34, 34);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  border: none;
+  animation-name: disparitieBtn;
+  animation-duration: 1s;
+}
+
+@keyframes aparitieBtn {
+  from {right: -50px;}
+  to {right: 6px;}
+ }
+
+@keyframes disparitieBtn {
+from {right: 6px;}
+to {right: -50px;}
+}
+ 
+
+#myBtn:hover{
+  background-color: #555;
+}
+
+/*Continutul
+======================*/
+body{
+    background-color: #fff;
+    overflow-x: hidden; /*in cazul cand elementele depasesc marimea paginii, nu pot da scroll stanga-dreapta*/
+}
+
+.aside-main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 30px 0;
+}
+
+.fa-bars{
+  cursor: pointer;
+  font-size: 30px;
+} 
+
+.nume_brand{
+  display: none;
+}
+.nume_brand_Block{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  height: 50px;
+}
+.numeBrandItem{
+  text-transform: uppercase;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  animation: numeAparitie;
+  animation-duration: 1.2s;
+  opacity: .5;
+}
+@keyframes numeAparitie{
+  from{opacity: 0;}
+  to{opacity: .5;}
+}
+
+.numeBrandItem:hover{
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .nume_brand_Block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    padding-top: 15px;
+  }
+}
+
+.continutMain1{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 360px);
+  justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+}
+
+.main_item{
+  position: relative;
+  width: 360px;
+  height: 360px;
+  animation: itemAparitie;
+  animation-duration: 1s;
+}
+@keyframes itemAparitie{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+.image_main{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.middle{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .4s ease;
+  background-color: black;
+  cursor: pointer;
+}
+
+.main_item:hover .middle{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.text_middle{
+  display: none;
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation-name: aparitie;
+  animation-duration: 1s;
+  width: 100%;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+@keyframes aparitie {
+  from {top: 60%;}
+  to {top: 50%;}
+}
+
+.main_item:hover .text_middle{
+  display: block;
+}
+
+.nrPagini{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 30px;
+  margin: 50px 0;
+}
+.nrPaginiItem{
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif; 
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 5px;
+  text-decoration: none;
+  color: black;
+}
+.nrPaginiItem:hover{
+  font-size: 25px;
+}
+#left,
+#right{
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+#left:hover, #right:hover{
+  font-size: 22px;
+}
+
+.hide{
+  display: none;
+  transition: .4s ease;
+
+}
+
+
+
+
+ 
+
+
+

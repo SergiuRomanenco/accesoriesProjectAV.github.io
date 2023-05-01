@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Accesories</title>
+    <link rel="stylesheet" href="./styleLogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container_general">
+        <div class="container_register">
+            <div class="form">
+                <h1 class="titlu_formular">Formular de logare</h1>
+                <form class="formular">
+                    <input class="formInput" type="email" placeholder="Introduceti email">
+                    <input class="formInput" type="password" placeholder="Parola">
+                
+                    <div class="display-inline">
+                        <input type="checkbox"> <span>Sunt de acord cu <a href="#">Termenii si Condițiile</a></span>
+                    </div>
+                    <button class="butonRegister">Logare</button>
+                    <button type="reset" class="butonRegisterAcasa" id="butonRegisterAcasa">Acasă</button>
+                    <p>Nu aveti un cont? Înregistrați-vă <a href="./indexRegister.html">aici</a>.</p>
+                </form>
+            </div>
+
+            <div class="gradient">
+                <div class="elementeGradient">
+                    <h1 class="title_form">Începe-ți călătoria cu noi.</h1>
+                    <p class="prg_form" >Descoperă cele mai captivante informații și noutăți despre ceasurile de mână și brandurile acestora.</p>
+                    <button class="butonAcasa" onclick="acasa()">Acasă</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function acasa(){
+            window.location.href = "../Home/indexHome.html";
+        }
+
+        let acasaResponsive = document.getElementById("butonRegisterAcasa");
+        acasaResponsive.onclick = function() {
+            window.location.href = "../Home/indexHome.html";
+        } 
+    </script>
+    
+</body>
+</html>

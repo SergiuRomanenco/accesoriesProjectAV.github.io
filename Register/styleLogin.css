@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container_general{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.container_register{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 90vh;
+    border-radius: 5px;
+}
+
+.gradient{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 90vh;
+    background: rgb(131,58,180);
+    background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(205,140,48,1) 100%);
+}
+
+.elementeGradient{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.title_form{
+    color: white;
+    font-size: 70px;
+    width: 100%;
+    font-family: 'Work Sans', sans-serif;
+}
+.prg_form{
+    color: white;
+    width: 100%;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    margin: 18px 0 35px 0;
+}
+
+.butonAcasa{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 30%;
+}
+.butonAcasa:hover{
+    background-color: #ccc;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 90vh;
+    background-color: #fff;
+}
+
+.titlu_formular{
+    color: black;
+    text-align: center;
+}
+
+.formular{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin-top: 40px;
+}
+
+.formInput{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.display-inline{
+    margin: 30px 0;
+}
+
+.butonRegister{
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(254, 97, 0, 0.84);
+    margin-bottom: 10px;
+}
+.butonRegister:hover{
+    background-color: rgba(214, 82, 0, 0.84);
+}
+
+.butonRegisterAcasa{
+    display: none;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(184, 184, 184);
+    margin-bottom: 5px;
+}
+.butonRegisterAcasa:hover{
+    background-color: rgb(141, 141, 141);
+}
+
+@media screen and (max-width: 950px){
+    .gradient{
+        display: none;
+    }
+    .form{
+        width: 100%;
+        height: 70vh;
+    }
+    .container_register{
+        height: 70vh;
+        width: 70%;
+    }
+    .butonRegisterAcasa{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px){
+   
+    .form{
+        width: 100%;
+        height: 70vh;
+    }
+    .container_register{
+        height: 70vh;
+        width: 85%;
+    }
+    .titlu_formular{
+        width: 70%;
+    }
+    .formular{
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 500px){
+    .titlu_formular{
+        width: 70%;
+    }
+}

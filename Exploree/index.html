@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Accesories</title>
+
+    <script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+
+	<link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../styleGlobalCSS/styleGlobal.css"> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap" rel="stylesheet">
+
+	<script src="js/app.js" defer></script>
+</head>
+<body class="darkMode" id="body">
+    <button onclick="topFunction()" class="btnNone" id="myBtn" title="Go to top"><i id="right" class="fa-solid fa-angle-up"></i></button>
+    
+    <div class="wrapper">
+        <div class="content">
+            <!--<button onclick="lightMode()" class="btnMode">buton</button>  -->  
+            <i id="iconMode" class="fa-solid fa-moon" onclick="lightMode()"></i>
+
+             <!--header-ul impreuna cu nav--> 
+             <header>
+                <nav id="nagivatie" style="position: absolute;">
+                    <a class="link_nav" href="../About/indexAbout.html">despre</a>
+                    <a class="link_nav" href="../Exploree/index.html">exploră</a>
+                    <i id="icon" class="fa-solid fa-home" style="transition: .6s ease;" onclick="homeButton()"></i>
+                    <a class="link_nav" href="../Journal/indexJournal.html">jurnal</a>
+                    <a class="link_nav" href="../Register/indexRegister.html">Logare</a>           
+                </nav> <!--/nav-->
+            </header> <!--/header-->
+
+
+            <!-- data - atribut (acele efecte pe care le pot controla, datorita (effects:true)) -->
+            <div class="hero-section">
+                <img data-lag=".5" data-speed=".6" class="hero" src="../Resource/o.png" alt="img-fundal"> <!--actioneaza ca efect parallax-->
+                <div class="container">
+                    <div data-speed=".75" class="main-header">
+                        <h1 class="main-title" id="main-title">Top 5 <br> Ceasuri de Calitate</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio">
+                <div class="container"> 
+                    <div class="gallery" id="gallery">
+
+                        <div data-speed=".9" class="gallery__left">
+                            <img class="gallery__item" src="../Resource/Erolex1.png" alt="Alt" onclick="btnImg1()">
+                            <div class="text-block gallery__item">
+                                <h2 class="text-block__h">2. TAG Heuer Aquaracer</h2>
+                                <p class="text-block__p">Aquaracer are un volum de căutare de 33.100. Prețul entry-level pentru colecția de ceasuri de scufundări este poziționat la aproximativ 800 GBP pentru versiunea cu cuarț și aproximativ 1.300 GBP pentru autobobinatorul mecanic.</p>
+                            </div>
+                            <img class="gallery__item" src="../Resource/breitling.jpg" alt="Alt" onclick="btnImg3()">
+                            <div class="text-block gallery__item">
+                                <h2 class="text-block__h">4. Omega Speedmaster</h2>
+                                <p class="text-block__p">Este cel mai amănunțit model de ceas testat din lume și, pe lângă Speedmaster Professional, cu onoarea de a fi primul care a traversat suprafața Lunii, există astăzi o gamă largă de Speedmasters cu funcționalitate cronograf și accent pe sport. eleganţă. Volumul lunar de căutare: 90.500</p>
+                            </div>
+                            <img class="gallery__item" src="../Resource/rolexT.jpg" alt="Alt" onclick="btnImg5()">
+                        </div>
+
+
+                        <div data-speed="1.1" class="gallery__right">
+                            <div class="text-block gallery__item">
+                                <h2 class="text-block__h">1. Rolex Submariner</h2>
+                                <p class="text-block__p">Rolex a debutat cu Submariner - cel mai faimos ceas de scufundare din lume și posibil cel mai faimos ceas din lume, încă din 1953. Așa că, deși acest model a primit o reîmprospătare completă de 41 mm în urmă cu doar câțiva ani, prezicem că aniversarea de 70 de ani a acestui ceas va fi foarte specială.</p>
+                            </div>
+                            <img class="gallery__item" src="../Resource/heuer.jpg" alt="Alt" onclick="btnImg2()">
+                            <div class="text-block gallery__item">
+                                <h2 class="text-block__h">3. Breitling Navitimer</h2>
+                                <p class="text-block__p">Cel mai faimos dintre toate cronografele pilot provine de la marca Breitling. La scurt timp după lansarea Navitimer în anii 1950, Navitimer a devenit ceasul oficial al sindicatului piloților, AOPA. De atunci, nu numai modelul cu designul său inconfundabil, precum și rigla de calcul rotativă sunt aduse în mod constant în legătură cu cronografele pilot de înaltă calitate, ci și Breitling însuși.</p>
+                            </div>
+                            <img class="gallery__item" src="../Resource/breitling1.jpg" alt="Alt">
+                            <img class="gallery__item" src="../Resource/omegaT.jpg" alt="Alt" onclick="btnImg4()">
+                            <div class="text-block gallery__item">
+                                <h2 class="text-block__h">5. Rolex Datejust</h2>
+                                <p class="text-block__p">Acesta este modelul clasic din toate timpurile, cu prima schimbare automată a datei. Disponibil într-o dimensiune de 36 mm, precum și în versiunea Datejust II cu centimetri mai mare, este un ceas care este încă la fel de popular ca acum șapte decenii, când această nouă realizare tehnică de la Rolex a uimit întreaga omenire.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="gallery-responsive">
+                        <img class="gallery__img" src="../Resource/Erolex1.png" alt="Alt" onclick="btnImg1()">
+                        <div class="text-block gallery__text">
+                            <h2 class="text-block__h">1. Rolex Submariner</h2>
+                            <p class="text-block__p">Rolex a debutat cu Submariner - cel mai faimos ceas de scufundare din lume și posibil cel mai faimos ceas din lume, încă din 1953. Așa că, deși acest model a primit o reîmprospătare completă de 41 mm în urmă cu doar câțiva ani, prezicem că aniversarea de 70 de ani a acestui ceas va fi foarte specială.</p>
+                        </div>
+                        <img class="gallery__img" src="../Resource/heuer.jpg" alt="Alt" onclick="btnImg2()">
+                        <div class="text-block gallery__text">
+                            <h2 class="text-block__h">2. TAG Heuer Aquaracer</h2>
+                            <p class="text-block__p">Aquaracer are un volum de căutare de 33.100. Prețul entry-level pentru colecția de ceasuri de scufundări este poziționat la aproximativ 800 GBP pentru versiunea cu cuarț și aproximativ 1.300 GBP pentru autobobinatorul mecanic.</p>
+                        </div>
+                        <img class="gallery__img" src="../Resource/breitling.jpg" alt="Alt" onclick="btnImg3()">
+                        <div class="text-block gallery__text">
+                            <h2 class="text-block__h">3. Breitling Navitimer</h2>
+                            <p class="text-block__p">Cel mai faimos dintre toate cronografele pilot provine de la marca Breitling. La scurt timp după lansarea Navitimer în anii 1950, Navitimer a devenit ceasul oficial al sindicatului piloților, AOPA. De atunci, nu numai modelul cu designul său inconfundabil, precum și rigla de calcul rotativă sunt aduse în mod constant în legătură cu cronografele pilot de înaltă calitate, ci și Breitling însuși.</p>
+                        </div>
+                        <img class="gallery__img" src="../Resource/omegaT.jpg" alt="Alt" onclick="btnImg4()">
+                        <div class="text-block gallery__text">
+                            <h2 class="text-block__h">4. Omega Speedmaster</h2>
+                            <p class="text-block__p">Este cel mai amănunțit model de ceas testat din lume și, pe lângă Speedmaster Professional, cu onoarea de a fi primul care a traversat suprafața Lunii, există astăzi o gamă largă de Speedmasters cu funcționalitate cronograf și accent pe sport. eleganţă. Volumul lunar de căutare: 90.500</p>
+                        </div>
+                        <img class="gallery__img" src="../Resource/rolexT.jpg" alt="Alt" onclick="btnImg5()">
+                        <div class="text-block gallery__text">
+                            <h2 class="text-block__h">5. Rolex Datejust</h2>
+                            <p class="text-block__p">Acesta este modelul clasic din toate timpurile, cu prima schimbare automată a datei. Disponibil într-o dimensiune de 36 mm, precum și în versiunea Datejust II cu centimetri mai mare, este un ceas care este încă la fel de popular ca acum șapte decenii, când această nouă realizare tehnică de la Rolex a uimit întreaga omenire.</p>
+                        </div>
+
+                    </div>
+                 
+                </div>
+            </div>
+    
+            <!--Footer-->
+            <footer id="footer">
+                <div class="footer">
+                    <div class="logo">
+                        <div class="logo-items">
+                            <div class="title-logo">
+                                <h1>Accesoriile <br> Perfecte</h1>
+                            </div>
+                        <p class="contact-footer">Contact Information:</p> 
+                        <a id="link-black" class="linkF" href="#">Politica de confidențialitate</a>
+                        </div>
+                    </div>
+            
+                    <div class="site-map">
+                        <div class="link-footer">
+                            <h3>Harta site-ului:</h3>
+                            <h2>Accesoriile <br> Perfecte</h2>
+                            <div class="link-uri" id="link-uri">
+                                <a class="linkFN" href="../Home/indexHome.html">Acasă</a>
+                                <a class="linkFN" href="../About/indexAbout.html">Despre</a>
+                                <a class="linkFN" href="../Exploree/index.html">Exploră</a>
+                                <a class="linkFN" href="../Journal/indexJournal.html">Jurnal</a>
+                                <a class="linkFN" href="../Register/indexRegister.html">Logare</a>
+                            </div>
+                        </div>
+                        <p class="copyright">&copy; Copyright 2023. Toate drepturile rezervate.</p>
+                    </div>
+            
+                    <div class="mail-adress"> 
+                        <div class="mailAdressItems">
+                            <form class="mail-form">
+                                <input id="formFooter" class="email" type="email" placeholder="Introducti email">
+                            </form>
+                            <button>Abonează-te</button>
+                            <form class="form_social_media">
+                                <input class="social_media" type="image" src="../Resource/Facebook.png" alt="Facebook" style="border-radius: 7px;">
+                                <input class="social_media" type="image" src="../Resource/Instagram.jpg" alt="Instagram">
+                                <input class="social_media" type="image" src="../Resource/WhatsApp.png" alt="WhatsApp">
+                                <input class="social_media" type="image" src="../Resource/Telegram.png" alt="Telegram" style="border-radius: 7px;">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-copyright">
+                    <p class="copyright-responsive">&copy; Copyright 2023. Toate drepturile rezervate.</p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        //Home button
+        function homeButton(){
+        window.location.href = "../Home/indexHome.html";
+        }
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+body{
+    background-color: black;
+    overflow-x: hidden; /*in cazul cand elementele depasesc marimea paginii, nu pot da scroll stanga-dreapta*/
+    
+}
+
+/* primul container cu titlu din mijloc 
+======================*/
+.container_intro1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+/*(bloc) stratul de deasupra*/
+.bloc_titlu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    z-index: 2;
+}
+
+.titlu_principal{
+    color: #fff;
+    font-size: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.descriere_titlu{
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.video_buton{
+    width: 80px;
+    height: 80px;
+    margin-top: 40px;
+}
+.video_buton:hover{
+    filter: opacity(50%);
+}
+
+.intro3-responsive{
+    display: none;
+    z-index: 2;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.elem-responsive a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: 'Noto Sans', sans-serif;
+    cursor: pointer;
+}
+
+/* al doilea container cu numarul paginilor 
+=========================*/
+.container_intro2{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+/*(bloc) stratul de deasupra*/
+.intro_pagini{
+    display: flex;
+    margin-top: 15vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 370px;
+    width: 80px;
+    z-index: 2; 
+}
+
+.nr_pagini{
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.nr_pagini:hover{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+/* al treilea container cu descrieri de jos
+=========================*/
+.container_intro3{
+    display: flex;
+    width: 100%;
+    height: 106vh;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+}
+
+/*(bloc) stratul de deasupra*/
+.blocMare_intro_detalii{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: 180px;
+    z-index: 2;
+}
+
+.bloc_intro_detalii{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 30%;
+    height: 120px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.bloc_intro_detalii:hover{
+    border-bottom: 1px solid red;
+}
+
+.img_paragraf{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45%;
+}
+
+.img_detalii{
+    width: 50px;
+    height: 50px;
+}
+
+.prg_intro_detalii{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 100;
+
+}
+
+.link_img{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.link_detalii{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+}
+.link_img i{
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.link_detalii:hover{
+    border-bottom: 1px solid #fff;
+}
+
+.img_detalii_buton{
+    width: 20px;
+    height: 20px;
+}
+
+/*efectul de vinieta pentru imaginea de fundal
+=======================================*/
+.vinieta{
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(transparent, black 300%), transparent;
+    position: absolute;
+    z-index: 1;
+}
+
+/*Imaginea de fundal pentru introducere
+======================================*/
+.container_img_intro{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Resource/fundal_proba.jpg);
+    background-size: cover;
+    filter: opacity(40%);
+    box-shadow: inset 0px -50px 60px black;
+}
+
+@media screen and (max-width: 1000px){
+    .container_intro2{
+        display: none; 
+    }
+}
+@media screen and (max-width: 760px){
+    .container_intro3{
+        display: none;
+    }
+    .intro3-responsive{
+        display: block;
+    }
+}
+@media screen and (max-width: 500px){
+    .titlu_principal{
+        font-size: 35px;
+    }
+    .bloc_titlu{
+        width: 300px;
+    }
+}
+
+.btnNone{
+    display: none;
+  }
+  
+.myBtn{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 100;
+    background-color: rgb(226, 34, 34);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    border: none;
+    animation-name: aparitie;
+    animation-duration: 1s;
+}
+
+.disparitieBtn{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: -50px;
+    z-index: 100;
+    background-color: rgb(226, 34, 34);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    border: none;
+    animation-name: disparitie;
+    animation-duration: 1s;
+}
+
+@keyframes aparitie {
+    from {right: -50px;}
+    to {right: 15px;}
+}
+
+@keyframes disparitie {
+    from {right: 15px;}
+    to {right: -50px;}
+}
+
+
+#myBtn:hover{
+    background-color: #555;
+}
+
+
+/*pagina 1 de bun venit
+====================================*/
+.container_pag1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    background-image: url(../Resource/asfalt-light.png);
+    box-shadow: inset 0px 80px 80px black;
+}
+
+.bloc_pag1{
+    width: 80%;
+    padding: 120px 0 20px 0;
+}
+
+.element1_pag1, .element2_pag1{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 450px);
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.element_coloana{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 300px;
+}
+
+.titlu_pag1{
+    font-size: 50px;
+    color: white;
+    max-width: 80%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.prg_pag1{
+    color: white;
+    font-size: 15px;
+    max-width: 90%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.denumire_pag1{
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 5px;
+}
+
+@media screen and (max-width: 1150px){
+    .element1_pag1, .element2_pag1{
+        grid-template-columns: repeat(auto-fill, 400px);
+    }
+    .element_coloana{
+        width: 400px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 1000px){
+    .bloc_pag1{
+        padding: 50px 0 20px 0;
+    }
+    .element1_pag1, .element2_pag1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .element1_pag1{
+        flex-direction: column-reverse;
+    }
+    .element_coloana{
+        width: 500px;
+        height: 300px;
+    }
+    .titlu_pag1{
+        text-align: center;
+    }
+    .prg_pag1{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .element_coloana{
+        width: 350px;
+        height: 300px;
+    }
+}
+
+
+/*pagina 2 de continut
+============================*/
+.container_pag2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url(../Resource/asfalt-light.png);
+    box-shadow: inset 0px -50px 60px black;
+}
+
+.blocMare1_pag2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    height: 160px;
+    margin-top: 60px;
+}
+.blocNone{
+    display: none;
+}
+
+.titlu_pag2{
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.prg_pag2{
+    color: #fff;
+    max-width: 560px;
+    text-align: center;
+    line-height: 2;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+.blocMare2_pag2{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 310px);
+    justify-content: center;
+    grid-gap: 10px;
+    max-width: 1200px;
+    width: 95%;
+    height: auto;
+    margin: 30px auto;
+}
+
+.element_blocMare2{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 310px;    
+    height: 390px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.denumire_BM2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
+    margin-bottom: 30px;
+    position: absolute;
+}
+
+.element1{
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 900; 
+}
+
+.element2{
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 3px;
+}
+
+.element_blocMare2:hover{
+    box-shadow: 0px 0px 30px gray;
+    cursor: pointer;
+}
+
+.element1:hover{
+    border-bottom: 1px solid white;
+}
+ 
+.seeMore{
+    color: rgb(88, 131, 205);
+    font-size: 35px;
+    font-weight: 900;
+}
+.seeMore:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 450px){
+    .prg_pag2{
+        padding-bottom: 40px;
+    }
+}
+
+
+/*Pagina 3 de continut
+=============================*/
+.container_pag3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url(../Resource/fundal_CP2.jpg);
+    background-size: cover;
+    box-shadow: inset 0px 80px 80px black;
+}
+
+.bloc1_CP3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+.titlu_CP3{
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Inter', sans-serif;}
+
+.prg_CP3{
+    color: #fff;
+    font-size: 18px;
+    padding-top: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.bloc2_CP3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-left: 50px;
+    padding: 100px 0 50px 0;
+}
+
+.card{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 370px;
+    height: 185px;
+    margin-bottom: 12px;
+}
+
+.linkCP3{
+    color: white;
+    position: absolute;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 4px;
+}
+
+.linkCP3:hover{
+    border-bottom:1px solid white;
+}
+
+@media screen and (max-width: 950px){
+    .bloc1_CP3{
+        display: none;
+    }
+    .bloc2_CP3{
+        margin-left: 0;
+    }
+}
+
+
+/*Pagina 4 de continut 
+=====================================*/
+.container_pag4{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 500px);
+    justify-content: center;
+    grid-gap: 10px;
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    padding: 160px 0;
+    
+}
+
+.backgroundP4{
+    width: 100%;
+    background-image: url(../Resource/asfalt-light.png);
+    box-shadow: inset 0px 70px 70px black;
+}
+
+.element_P4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    background-color: #181818;
+}
+
+.img_P4{
+    width: 100%;
+    height: 300px;
+}
+
+.buton_accesorii{
+    display: grid;
+    place-items: center;
+    width: 53%;
+    height: 50px;
+    border: 1px solid white;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    margin-top: 25px;
+}
+
+.link_P4{
+    color: white;
+    text-decoration: none;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.buton_accesorii:hover{
+    width: 62%;
+    height: 50px;
+    border: 1px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    cursor: pointer;
+}
+
+.div_P4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    justify-content: space-between;
+    margin-top: 120px;
+    width: 60%;
+}
+
+.titlu_P4{
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 8px;
+}
+.prg_P4{
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+@media screen and (max-width: 550px){
+    .container_pag4{
+        grid-template-columns: repeat(auto-fill, 360px);
+    }
+    .element_P4{
+        width: 360px;
+    }
+    .buton_accesorii{
+        width: 70%;
+    }
+    .div_P4{
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

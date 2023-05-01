@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Accesories</title>
+    <link rel="stylesheet" href="./styleRegister.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <div class="container_general">
+        <div class="container_register">
+            <div class="gradient">
+                <div class="elementeGradient">
+                    <h1 class="title_form">Începe-ți călătoria cu noi.</h1>
+                    <p class="prg_form" >Descoperă cele mai captivante informații și noutăți despre ceasurile de mână și brandurile acestora.</p>
+                    <button class="butonAcasa" onclick="acasa()">Acasă</button>
+                </div>
+            </div>
+            <div class="form">
+                <h1 class="titlu_formular">Formular de înregistrare</h1>
+                <form class="formular">
+                    <input class="formInput" type="text" placeholder="Nume si Prenume">
+                    <input class="formInput" type="email" placeholder="Introduceti email">
+                    <input class="formInput" type="password" placeholder="Parola" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
+                    
+                    <div id="message">
+                        <p id="letter" class="invalid">O <b>minusculă</b> (a-z)</p>
+                        <p id="capital" class="invalid">O <b>majusculă</b> (A-Z)</p>
+                        <p id="number" class="invalid">Un <b>număr</b></p>
+                        <p id="length" class="invalid">Minimum <b>8 caractere</b></p>
+                    </div>
+
+                    <div class="radio-input">
+                        <label>Gen:</label>
+                        <div>
+                            <input type="radio" name="gen" value="Feminin">
+                            <label>Feminin</label>
+                        </div>
+                        <div> 
+                            <input type="radio" name="gen" value="Masculin">
+                            <label>Masculin</label>
+                        </div>
+                    </div>
+                    <input class="formInput" type="text" placeholder="Nr. de telefon">
+                    <div class="display-inline">
+                        <input type="checkbox"> <span>Sunt de acord cu <a href="#">Termenii si Condițiile</a></span>
+                    </div>
+                    <button class="butonRegister">Înregistrare</button>
+                    <button type="reset" class="butonRegisterAcasa" id="butonRegisterAcasa">Acasă</button>
+                    <p>Aveti deja un cont? Logati-va <a href="./indexLogin.html">aici</a>.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function acasa(){
+            window.location.href = "../Home/indexHome.html";
+        }
+
+        let acasaResponsive = document.getElementById("butonRegisterAcasa");
+        acasaResponsive.onclick = function() {
+            window.location.href = "../Home/indexHome.html";
+        }        
+    </script>
+    
+    <script src="./scriptRegister.js"></script>
+</body>
+</html>
