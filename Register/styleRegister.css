@@ -133,6 +133,7 @@
     position: relative;
     padding: 5px;
     margin-top: 10px;
+    height: auto;
 }
   
 #message p {
@@ -180,7 +181,6 @@
 }
 
 @media screen and (max-width: 500px){
-   
     .form{
         width: 100%;
         height: 85vh;
@@ -194,6 +194,7 @@
     }
     .formular{
         width: 75%;
+        height: 450px;
     }
 }
 
