@@ -3,7 +3,7 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother) //() --> plugin //scrollTriger - putem manipula cu elementele //scrollSmoother - scroll lin
 
 //daca nu suntem pe un dispozitiv care se listeaza cu touch (mobil, tableta...)
-if(ScrollTrigger.isTouch !== 1) {
+
     ScrollSmoother.create({
         wrapper: ".wrapper", //cream o clasa wrapper. wrapper - strat
         content: ".content", //va plana in interiorul wrapper-ului
@@ -56,9 +56,9 @@ itemsR.forEach(item => {
         }
     });
 });
-};
 
-if(ScrollTrigger.isTouch !== 1){
+
+
     //animatie pentru imagini (RESPONSIVE)
     let itemsImg = gsap.utils.toArray(".gallery__img") //transforma elementele intr-un vector de elemente, pentru a putea anima pentru fiecare in parte.
     //() --> toate elementele din partea stanga
@@ -92,7 +92,7 @@ if(ScrollTrigger.isTouch !== 1){
             }
         });
     });
-}
+
 
 
 
