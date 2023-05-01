@@ -3,7 +3,7 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother) //() --> plugin //scrollTriger - putem manipula cu elementele //scrollSmoother - scroll lin
 
 //daca nu suntem pe un dispozitiv care se listeaza cu touch (mobil, tableta...)
-
+if(ScrollTrigger.isTouch !== 1) {
     ScrollSmoother.create({
         wrapper: ".wrapper", //cream o clasa wrapper. wrapper - strat
         content: ".content", //va plana in interiorul wrapper-ului
@@ -56,7 +56,7 @@ itemsR.forEach(item => {
         }
     });
 });
-
+};
 
 
     //animatie pentru imagini (RESPONSIVE)
