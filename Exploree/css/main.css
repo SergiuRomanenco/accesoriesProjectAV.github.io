@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 /*variabile*/
 :root { 
     --index: calc(1vw + 1vh); /*determina marimea paginii*/
@@ -258,6 +262,11 @@ to {right: -50px;}
         right: 5px;
         top: 5px;
     }
+    
+    /*will-change, pentru eliminarea intarzierilor*/
+.content, .hero, .main-header, .gallery > * {
+    will-change: transform;
+}
     
 }
 
