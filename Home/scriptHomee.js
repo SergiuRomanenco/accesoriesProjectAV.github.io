@@ -13,4 +13,19 @@ for(let i = 0; i < icon.length; i++){
 }
 
 
+//Footer social media
+function facebook(){
+    window.open("https://www.facebook.com/");
+}
+function instagram(){
+    window.open("https://www.instagram.com/");
+}
+function whatsapp(){
+    window.open("https://www.whatsapp.com/?lang=ro");
+}
+function telegram(){
+    window.open("https://web.telegram.org/k/");
+}
+
+
 
